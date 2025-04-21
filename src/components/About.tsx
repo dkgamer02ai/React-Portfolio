@@ -1,7 +1,6 @@
 import React from 'react';
 import { Shield, Award, BookOpen, Target, Fingerprint } from 'lucide-react';
 import profilePic from '/src/assets/pfp.png';
-console.log(profilePic);
 
 const About: React.FC = () => {
   const stats = [

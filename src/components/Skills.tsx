@@ -10,7 +10,6 @@ const Skills: React.FC = () => {
   const getIcon = (iconName: string) => {
     console.log(iconName,LucideIcons[iconName as IconName] as React.ElementType);
     const Icon = (LucideIcons[iconName as IconName] || Shield) as React.ElementType;
-    console.log(Icon);
     return <Icon className="w-8 h-8 text-cyan-400" />;
   };
   
