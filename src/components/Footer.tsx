@@ -29,7 +29,8 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <h3 className="text-white font-bold mb-4">About</h3>
             <p className="text-gray-400 mb-4">
-              Dedicated cybersecurity professional with over 7 years of experience helping organizations protect their digital assets from evolving threats.
+              Dedicated Cybersecurity Student with a passion for ethical hacking and a commitment to continuous learning. I am eager to apply my skills in real-world scenarios and contribute to the field of cybersecurity.
+              Currently pursuing a degree in Computer Science with a focus on cybersecurity, I am actively seeking internships and entry-level positions to gain hands-on experience and further develop my expertise.
             </p>
             <a href="#contact" className="text-cyan-400 hover:text-cyan-300 inline-flex items-center">
               Get in touch <ArrowUp className="ml-1 w-4 h-4 rotate-45" />
