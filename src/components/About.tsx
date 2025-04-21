@@ -16,7 +16,7 @@ const About: React.FC = () => {
           <div className="relative w-64 h-64 mx-auto mb-6">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400">
               <img
-                src="./src/assets/profile-pic.png"
+                src="src/assets/profile-pic.png"
                 alt="Arin Prashar"
                 className="w-full h-full object-cover"
               />
@@ -119,7 +119,7 @@ const About: React.FC = () => {
                 Get In Touch
               </a>
               <a 
-                href="#"
+                href="https://drive.google.com/file/d/1pMo10L1JdPehXgRZM8bTrpw9owLcxMcp/view?usp=sharing"
                 className="py-3 px-6 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-md transition-all duration-300 text-center flex items-center justify-center gap-2"
               >
                 <BookOpen className="w-5 h-5" /> Download Resume
