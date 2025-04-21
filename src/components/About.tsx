@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Award, BookOpen, Target, Fingerprint } from 'lucide-react';
+// import profilePic from '../../assets/profile-pic.png';
 
 const About: React.FC = () => {
   const stats = [
@@ -13,16 +14,16 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Profile Section */}
         <div className="text-center mb-16">
-          <div className="relative w-64 h-64 mx-auto mb-6">
+          <div className="relative w-32 h-32 mx-auto mb-6">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400">
               <img
-                src="src/assets/profile-pic.png"
+                src="/assets/profile-pic.png"
                 alt="Arin Prashar"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
-              <Fingerprint className="w-4 h-4 text-gray-900" />
+            <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
+              <Fingerprint className="w-5 h-5 text-gray-900" />
             </div>
           </div>
           <h2 className="text-3xl font-bold text-white mb-2">Arin Prashar</h2>
