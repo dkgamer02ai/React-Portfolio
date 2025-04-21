@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Award, BookOpen, Target, Fingerprint } from 'lucide-react';
-// import profilePic from '../../assets/profile-pic.png';
+import profilePic from '/src/assets/pfp.png';
+console.log(profilePic);
 
 const About: React.FC = () => {
   const stats = [
@@ -17,7 +18,7 @@ const About: React.FC = () => {
           <div className="relative w-32 h-32 mx-auto mb-6">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-cyan-400">
               <img
-                src="/assets/profile-pic.png"
+                src={profilePic}
                 alt="Arin Prashar"
                 className="w-full h-full object-cover"
               />
