@@ -36,7 +36,7 @@ const About: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <div className="bg-gray-900 rounded-lg overflow-hidden shadow-2xl border border-gray-700">
-                <div className="bg-gray-800 p-3 border-b border-gray-700 flex items-center">
+                <div className="bg-gray-600 p-3 border-b border-gray-700 flex items-center">
                   <div className="flex gap-2 mr-4">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
