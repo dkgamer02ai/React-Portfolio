@@ -21,7 +21,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Basic Todo App",
     description: "Developed a basic Todo app using React and Node.js.",
-    tags: ["API Security", "Authentication", "Authorization"],
+    tags: ["React JS","Web Development","Node JS"],
     imageUrl: "https://images.pexels.com/photos/110473/pexels-photo-110473.jpeg",
     link:"https://github.com/dkgamer02ai/Todo-App" 
   },
