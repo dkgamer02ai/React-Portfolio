@@ -10,7 +10,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-10 bg-gray-800">
+    <section id="about" className="py-10 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Profile Section */}
         <div className="text-center mb-16">
