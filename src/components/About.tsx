@@ -28,6 +28,7 @@ const About: React.FC = () => {
           </div>
           <h2 className="text-3xl font-bold text-white mb-2">Arin Prashar</h2>
           <p className="text-cyan-400 text-lg">Vulnerability Analyst & Penetration Tester</p>
+          <p className="text-cyan-400 text-lg">System Administration</p>
           <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto my-6"></div>
         </div>
 
@@ -58,12 +59,12 @@ const About: React.FC = () => {
                     <span className="text-cyan-400">cat expertise.txt</span>
                   </div>
                   <div className="text-gray-300 mt-1 mb-3">
-                    <span className="text-yellow-400">['Web App Testing', 'Network Security', 'API Testing', 'Vulnerability Assessment']</span>
+                    <span className="text-yellow-400">['Web App Testing', 'Network Security', 'Development', 'Vulnerability Assessment']</span>
                   </div>
                   
                   <div className="flex">
                     <span className="text-green-400 mr-2">$</span>
-                    <span className="text-cyan-400">cat tools.txt</span>
+                    <span className="text-cyan-400">cat tools.json</span>
                   </div>
                   <div className="text-gray-300 mt-1 mb-3">
                     <span className="text-white">{`{`}</span><br />
@@ -75,8 +76,11 @@ const About: React.FC = () => {
                   
                   <div className="flex items-center">
                     <span className="text-green-400 mr-2">$</span>
-                    <span className="text-cyan-400">Status:  <span className="text-red-400 mr-2">Looking For Work</span></span>
-                    <span className="ml-2 inline-block w-2 h-4 bg-cyan-400 animate-pulse"></span>
+                    <span className="text-cyan-400">echo <span className="text-green-400">$STATUS</span></span>
+                  </div>
+                  <div className="text-gray-300 mt-1 mb-3">
+                  <span className="text-red-400 mr-2">Looking For Work....</span>
+                  <span className="ml-2 inline-block w-2 h-4 bg-cyan-400 animate-pulse"></span>
                   </div>
                 </div>
               </div>
