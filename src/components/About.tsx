@@ -97,12 +97,15 @@ const About: React.FC = () => {
             <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mb-5"></div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              As a certified eJPTv2 professional, I specialize in vulnerability assessment and penetration testing. My expertise lies in identifying security weaknesses in web applications, networks, and APIs before malicious actors can exploit them.
+              As a certified eJPTv2 professional, Specializing in vulnerability assessment and penetration testing. Expertise lies in identifying security weaknesses in web applications ,and networks before malicious actors can exploit them.
             </p>
-            
             <p className="text-gray-300 mb-6 leading-relaxed">
-              I combine technical expertise with clear communication skills to deliver actionable security insights. My reports provide detailed findings and practical remediation steps that help organizations strengthen their security posture.
+              Combining Technical expertise with clear communication skills to deliver actionable security insights. Reports provide detailed findings and practical remediation steps that help organizations strengthen their security posture.
             </p>
+            <p className='text-gray-300 mb-6 leading-relaxed'>
+              Developing new scripts and tools to automate security tasks and improve efficiency. Passionate about staying up-to-date with the latest security trends and technologies, continuously learning and adapting to the evolving threat landscape.  
+            </p>
+
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
               {stats.map((stat, index) => (
