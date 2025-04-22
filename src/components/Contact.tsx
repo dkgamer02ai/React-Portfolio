@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-gray-800 rounded-lg p-8 border border-gray-700">
+          <div className="bg-gray-700 rounded-lg p-8 border border-gray-600">
             <h3 className="text-xl font-bold text-white mb-6">Send Me a Message</h3>
             
             {submitStatus.success && (
@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
           </div>
           
           <div>
-            <div className="bg-gray-800 rounded-lg p-8 border border-gray-700 mb-8">
+            <div className="bg-gray-780 rounded-lg p-8 border border-gray-600 mb-8">
               <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
               
               <div className="space-y-6">
@@ -212,7 +212,7 @@ const Contact: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 border border-gray-700">
+            <div className="bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg p-8 border border-gray-600">
               <h3 className="text-xl font-bold text-white mb-4">Emergency Response</h3>
               <p className="text-gray-400 mb-6">
                 Experiencing a security incident? Get priority emergency assistance with my rapid response service.
