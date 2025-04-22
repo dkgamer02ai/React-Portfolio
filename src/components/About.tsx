@@ -35,14 +35,14 @@ const About: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
             <div className="relative">
-              <div className="bg-gray-900 rounded-lg overflow-hidden shadow-2xl border border-gray-700">
+              <div className="bg-gray-700 rounded-lg overflow-hidden shadow-2xl border border-gray-500">
                 <div className="bg-gray-600 p-3 border-b border-gray-700 flex items-center">
                   <div className="flex gap-2 mr-4">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="text-gray-400 text-sm font-mono flex-1 text-center">
+                  <div className="text-gray-200 text-sm font-mono flex-1 text-center">
                     vulnerability-scan.sh
                   </div>
                 </div>
