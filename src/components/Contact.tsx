@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
                     Your Name
                   </label>
                   <input
