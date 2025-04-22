@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="flex items-center mb-6 md:mb-0">
             <ShieldAlert className="h-8 w-8 text-cyan-400 mr-2" />
-            <span className="font-bold text-xl text-white">SecurePortfolio</span>
+            <span className="font-bold text-xl text-white">Security My Fooot</span>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
         
         <div className="pt-8 mt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} SecurePortfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} Security My Fooot. All rights reserved.
           </p>
           
           <button

@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -8,10 +7,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  useEffect(() => {
-    // Update page title
-    document.title = "DKGamer02AI's Folio";
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
