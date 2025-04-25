@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.retro.darker');
+    color: theme('colors.white');
+    font-family: 'Press Start 2P', cursive;
+  }
+}
+
+.pixel-border {
+  position: relative;
+  border: 4px solid theme('colors.retro.blue');
+  background: theme('colors.retro.dark');
+}
+
+.pixel-border::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: repeating-linear-gradient(
+    45deg,
+    theme('colors.retro.blue'),
+    theme('colors.retro.blue') 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  z-index: -1;
+  animation: border-dance 20s linear infinite;
+}
+
+@keyframes border-dance {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+.retro-grid {
+  background-image: linear-gradient(theme('colors.retro.blue/10') 2px, transparent 2px),
+    linear-gradient(90deg, theme('colors.retro.blue/10') 2px, transparent 2px);
+  background-size: 30px 30px;
+  background-position: -2px -2px;
+}
+
+.pixel-shadow {
+  box-shadow: 
+    4px 0 theme('colors.retro.blue'),
+    -4px 0 theme('colors.retro.purple'),
+    0 4px theme('colors.retro.pink');
+}
+
+.retro-button {
+  position: relative;
+  background: theme('colors.retro.blue');
+  border: none;
+  padding: 8px 16px;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 0.1s;
+}
+
+.retro-button::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: theme('colors.retro.purple');
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+.retro-button:hover {
+  transform: translateY(-2px);
+}
+
+.retro-button:active {
+  transform: translateY(2px);
+}

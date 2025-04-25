@@ -1,105 +1,115 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, ShieldCheck } from 'lucide-react';
+import { ShieldCheck, Bug, Shield } from 'lucide-react';
 
-const Hero: React.FC = () => {
+const MatrixRain: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
+
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    
-    const fontSize = 14;
-    const columns = Math.floor(canvas.width / fontSize);
-    
+
     const chars = '01ABCDEFGHIJKLMNOPQRSTUVWXYZ$+-*/=%"\'#&_(),.;:?!\\|{}<>[]^~';
-    
+    const fontSize = 16;
+    const columns = Math.floor(canvas.width / fontSize);
     const drops: number[] = [];
+
     for (let i = 0; i < columns; i++) {
       drops[i] = Math.random() * -100;
     }
-    
+
     const draw = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillStyle = 'rgba(20, 24, 36, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      ctx.fillStyle = '#0fa';
-      ctx.font = `${fontSize}px monospace`;
-      
+
+      ctx.fillStyle = '#50E3C2';
+      ctx.font = `${fontSize}px 'Press Start 2P'`;
+
       for (let i = 0; i < drops.length; i++) {
         const text = chars[Math.floor(Math.random() * chars.length)];
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        
+
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
-        
         drops[i]++;
       }
     };
-    
+
     const interval = setInterval(draw, 33);
-    
+
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    
+
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       clearInterval(interval);
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  
+
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <canvas 
-        ref={canvasRef} 
-        className="absolute inset-0 w-full h-full z-0 opacity-30"
-      ></canvas>
-      
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/70 to-black/90 z-10"></div>
-      
-      <div className="container mx-auto px-4 relative z-20 text-center pt-16">
-        <div className="inline-flex items-center justify-center mb-6 bg-gray-800/80 px-4 py-2 rounded-full">
-          <ShieldCheck className="w-5 h-5 text-cyan-400 mr-2" />
-          <span className="text-cyan-400 font-medium">Vulnerability Analyst & Penetration Tester</span>
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full opacity-30"
+    />
+  );
+};
+
+const Hero: React.FC = () => {
+  return (
+    <section className="min-h-screen relative overflow-hidden bg-retro-darker py-20">
+      <MatrixRain />
+      <div className="container mx-auto px-4 relative z-10 pt-20">
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center mb-8 bg-retro-dark p-4 rounded-lg pixel-border">
+            <ShieldCheck className="w-8 h-8 text-retro-green mr-3" />
+            <span className="text-retro-green text-xl font-pixel">SECURITY EXPERT</span>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-12 relative">
+            <h1 className="text-4xl md:text-5xl font-pixel leading-relaxed mb-6">
+              <span className="text-retro-yellow">HACK</span>
+              <span className="text-retro-pink">&lt;</span>
+              <span className="text-retro-blue">THE</span>
+              <span className="text-retro-pink">&gt;</span>
+              <span className="text-retro-purple">PLANET</span>
+              <span className="animate-blink text-retro-green">_</span>
+            </h1>
+
+            <div className="flex justify-center gap-6 mb-8">
+              <Bug className="w-12 h-12 text-retro-pink animate-float" />
+              <Shield className="w-12 h-12 text-retro-blue animate-float" style={{ animationDelay: '0.5s' }} />
+              <Bug className="w-12 h-12 text-retro-green animate-float" style={{ animationDelay: '1s' }} />
+            </div>
+
+            <p className="text-lg text-retro-blue mb-8 font-pixel">
+              eJPTv2 Certified // Vulnerability Hunter // Code Breaker
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="#projects" className="retro-button text-white font-pixel">
+              VIEW_MISSIONS.exe
+            </a>
+            <a href="#contact" className="retro-button text-white font-pixel bg-retro-purple">
+              INITIATE_CONTACT.exe
+            </a>
+          </div>
         </div>
-        
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-300 mb-6 leading-tight">
-          Finding Vulnerabilities <br /> Before Attackers Do
-        </h1>
-        
-        <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-          Certified eJPTv2 professional specializing in vulnerability assessment, penetration testing, and securing digital assets against emerging threats.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a 
-            href="#projects" 
-            className="py-3 px-8 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-md transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-cyan-500/25"
-          >
-            View My Work
-          </a>
-          <a 
-            href="#contact" 
-            className="py-3 px-8 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-md border border-gray-700 transition-all duration-300 transform hover:-translate-y-1"
-          >
-            Contact Me
-          </a>
-        </div>
-        
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a href="#skills" className="text-gray-400 hover:text-cyan-400 transition-colors">
-            <ArrowDown className="w-6 h-6" />
-          </a>
+
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <div className="text-retro-green font-pixel text-sm animate-pixel-bounce">
+            PRESS START
+          </div>
         </div>
       </div>
     </section>
